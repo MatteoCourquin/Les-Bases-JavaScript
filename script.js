@@ -107,9 +107,36 @@ console.log(str1.concat('', str2));
 
 
 
+// LES REGEX
+
+const str4 = 'Lorem ipsum dolor sit amet.';
 
 
-stopCode()
+const regex = /[A-Z]/g; // Va renvoyer les lettres majuscules de A > Z
+
+const regex1 = /[az]/gi; // Va renvoyer tout a, A, z, Z  (gi = global insensitive)
+
+const regex2 = /[^a-z]/g; // Va renvoyer tout sauf les lettres minuscules de a > z
+
+
+// Les lettres / chiffres
+const regex3 = /\d/g; // Va renvoyer tout les chiffres
+const regex4 = /\D/g;  // Va renvoyer tout ce qui n'est pas des chiffres
+const regex5 = /\w/g; // Va renvoyer tout de (a > z | A > Z | 0 > 9)
+const regex6 = /\W/g; // Va renvoyer tout l'inverse de (a > z | A > Z | 0 > 9)
+
+
+// Les espaces
+const regex7 = /\s/g; // Va renvoyer tout les espaces
+const regex8 = /\S/g; // Va renvoyer tout ce qui n'est pas des espaces
+
+
+// Faire appel a une regex
+console.log(str4.match(regex));
+
+// Va remplacer tout les "o" par "(replace)"
+console.log(str4.replace(/o/g, '(replace)'));
+
 
 
 
@@ -833,3 +860,9 @@ const promise1 = new Promise((resolve, reject) => {
 
 
 
+
+
+
+
+
+// stopCode()
